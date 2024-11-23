@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" 
+      navigatingTo="onNavigatingTo"
+      class="bg-black">
+    <ActionBar title="{{ name }}" class="action-bar">
+        <NavigationButton android:systemIcon="ic_menu_back" tap="onBackTap"/>
+        <ActionItem tap="toggleMiniPlayer" ios.position="right" android.position="actionBar">
+            <Label text="🎵" class="text-xl" />
+        </ActionItem>
+    </ActionBar>
+    
+    <GridLayout rows="*, auto">
+        <WebView row="0" src="{{ url }}" id="webView" loaded="onWebViewLoaded" />
+        
+        <!-- Mini Player -->
+        <GridLayout row="1" columns="auto, *, auto" class="mini-player" visibility="{{ isMiniPlayerVisible ? 'visible' : 'collapsed' }}">
+            <Image col="0" src="{{ favicon }}" class="site-favicon" />
+            <Label col="1" text="{{ name }}" class="site-name" />
+            <Button col="2" text="×" tap="toggleMiniPlayer" class="close-button" />
+        </GridLayout>
+    </GridLayout>
+</Page>

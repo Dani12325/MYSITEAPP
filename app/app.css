@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.action-bar {
+    background-color: #000000;
+    color: white;
+}
+
+.site-item {
+    padding: 16;
+    border-bottom-width: 1;
+    border-bottom-color: #333333;
+    background-color: #000000;
+    color: white;
+}
+
+.add-button {
+    background-color: #1DB954;
+    color: white;
+    border-radius: 4;
+    padding: 12;
+    margin: 16;
+}
+
+/* Mini Player Style */
+.mini-player {
+    background-color: #1a1a1a;
+    padding: 12;
+    border-top-width: 1;
+    border-top-color: #333333;
+}
+
+.site-favicon {
+    width: 40;
+    height: 40;
+    border-radius: 20;
+    margin-right: 12;
+}
+
+.site-name {
+    color: white;
+    font-size: 16;
+    font-weight: bold;
+}
+
+.close-button {
+    color: #666666;
+    font-size: 20;
+    background-color: transparent;
+    border-width: 0;
+    padding: 0 8;
+}
+
+Page {
+    background-color: #000000;
+}

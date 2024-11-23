@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+    <ActionBar title="I Miei Siti" class="action-bar">
+        <ActionItem tap="onAdd" ios.position="right" android.position="actionBar">
+            <Label text="+" class="text-2xl" />
+        </ActionItem>
+    </ActionBar>
+
+    <StackLayout>
+        <ListView items="{{ sites }}" itemTap="onItemTap" separatorColor="#e0e0e0">
+            <ListView.itemTemplate>
+                <GridLayout columns="*, auto" class="site-item">
+                    <Label text="{{ name }}" col="0" class="text-lg" />
+                    <Label text="❌" col="1" tap="onDelete" class="text-lg" />
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+    </StackLayout>
+</Page>
